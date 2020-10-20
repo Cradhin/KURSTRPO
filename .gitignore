@@ -1,0 +1,11 @@
+*
+!ctest
+!src
+!source
+!test
+!README.md
+!.gitignore
+!.clang-format
+!.travis.yml
+!Makefile
+!.gitkeep
