@@ -1,6 +1,6 @@
 flags = -Wall -Werror
 
-all: src
+all: src	
 
 test: test
 
@@ -19,6 +19,9 @@ build/src/func.o: src/func.c
 	gcc $(flags) -c src/func.c -o build/src/func.o
 
 #test
+
+build/test:
+	mkdir -p build/test	
 
 test: build/test build/test/main.o build/test/func.o
 	gcc $(flags) build/test/*.o build/src/func.o -o bin/t
