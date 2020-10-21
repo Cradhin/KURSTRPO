@@ -5,10 +5,10 @@ all: src
 test: test
 
 run:
-./bin/bulls
+	./bin/bulls
 
 test_run:
-./bin/test
+	./bin/test
 
 #src
 
