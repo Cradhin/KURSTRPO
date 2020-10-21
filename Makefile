@@ -4,6 +4,12 @@ all: src
 
 test: test
 
+run:
+./bin/bulls
+
+test_run:
+./bin/test
+
 #src
 
 src: build/src build/src/main.o build/src/func.o
@@ -24,7 +30,7 @@ build/test:
 	mkdir -p build/test	
 
 test: build/test build/test/main.o build/test/func.o
-	gcc $(flags) build/test/*.o build/src/func.o -o bin/t
+	gcc $(flags) build/test/*.o build/src/func.o -o bin/test
 
 build/test/main.o: test/main.c
 	gcc $(flags) -c test/main.c -o build/test/main.o
