@@ -5,8 +5,7 @@
 
 int main(void)
 {
-    int num = generate_number(); 
-
+    int num = generate_number();     
     int input = 0, steps = 0, win = 0;     
 
     while (input != num && win == 0) {
