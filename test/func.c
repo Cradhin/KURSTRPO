@@ -74,6 +74,3 @@ CTEST(generate_number, generate_number_good_2)
 
     ASSERT_INTERVAL(exp1, exp2, real);
 }
-
-
-
