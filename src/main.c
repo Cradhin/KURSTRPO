@@ -4,27 +4,28 @@
 
 #include "func.h"
 
-int main(void) {
-  int num = generate_number();
-  int input = 0, steps = 0, win = 0;
+int main(void)
+{
+    int num = generate_number();
+    int input = 0, steps = 0, win = 0;
 
-  while (input != num && win == 0) {
-    printf("\nGuess: ");
-    scanf("%d", &input);
+    while (input != num && win == 0) {
+        printf("\nGuess: ");
+        scanf("%d", &input);
 
-    if (check_input(input)) {
-      print_info(num, input);
+        if (check_input(input)) {
+            print_info(num, input);
+        }
+        getchar();
+
+        if (input == num) {
+            win = 1;
+        }
+
+        steps++;
     }
-    getchar();
 
-    if (input == num) {
-      win = 1;
+    if (win == 1) {
+        printf("Congratulations!\nYou won in %d chances ", steps);
     }
-
-    steps++;
-  }
-
-  if (win == 1) {
-    printf("Congratulations!\nYou won in %d chances ", steps);
-  }
 }
