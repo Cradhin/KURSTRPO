@@ -15,7 +15,6 @@ int generate_number()
     return x;
 }
     
-
 int check_input(int num)
 {
     if (num > 1000 && num < 10000) {
